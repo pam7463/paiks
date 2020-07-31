@@ -35,12 +35,21 @@
       width:640px;      
       margin:0 auto;
     }
+    .content{
+      margin:0 12px;
+    }
 
     /* 헤더 스타일 시작 */
     .header{
       width:640px;
       height:70px;
       background-color:red;
+    }
+    .header .content{
+      display:flex;
+      flex-flow:row nowrap;
+      justify-content: space-between;
+      align-items:center;
     }
     /* 헤더 스타일 끝 */
 
@@ -98,7 +107,19 @@
 </head>
 <body>
   <div class="wrap">
-    <header class="header"></header>
+    <header class="header">
+      <div class="content">
+        <div class="main_logo">
+          <img src="./images/logo.png" alt="메인로고">
+          <h1>빽다방</h1>
+        </div>
+        <ul class="btn_ham">
+          <li>라인1</li>
+          <li>라인2</li>
+          <li>라인3</li>
+        </ul>
+      </div>
+    </header>
     <section class="section">
       <article class="main_banner"></article>
       <article class="coffee_story"></article>
