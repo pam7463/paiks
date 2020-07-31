@@ -23,7 +23,7 @@
     body{
       font-family:"Noto Sans KR";
     }
-    body,div,span,h1,h2,h3,h4,h5,h6,p,ul,li,section,header,footer,article,a{
+    body,div,form,input,button,select,textarea,span,h1,h2,h3,h4,h5,h6,p,ul,li,section,header,footer,article,a{
       font-size:14px;
       font-weight:400;
       line-height:1em;
@@ -164,8 +164,69 @@
     /* franchise_store 시작 */
     .franchise_store{
       height:291px;
-      background-color:cyan;
     }
+    .franchise_store .content>div{
+      width:302px;
+      height:291px;
+      padding:12px 0 0 16px;
+      border:2px solid #0e347e;
+      position: relative;
+    }
+    .franchise_store .content>div>h3{
+      text-transform:uppercase;
+      font-weight:900;
+      font-size:34px;
+      color:#0e347e;
+    }
+    .franchise_store .content>div>p{
+      font-weight:500;
+      font-size:14px;
+      color:#202020;
+    }
+    .franchise_store .franchise{
+      float:left;      
+    }
+    .franchise_store .franchise>img{
+      width:100%;
+      position: absolute;
+      bottom:0;
+      right:0;
+    }
+    .franchise_store .store{
+      float:right;
+    }
+    .franchise_store .store>form{
+      position:absolute;
+      left:19px;
+      bottom:42px;
+    }
+    .franchise_store .store>form>input{
+      width:263px;
+      height:34px;
+      border:2px solid #0e347e;
+      padding:10px;
+    }
+    .franchise_store .store>form>.circle{
+      width:16px;
+      height:16px;
+      border:2px solid #0e347e;
+      border-radius:50%;
+      text-indent:-99999px;
+      position:absolute;
+      right:12px;
+      top:7px;
+    }
+    .franchise_store .store>form>.line{
+      width:8px;
+      height:2px;
+      background-color:#0e347e;
+      text-indent: -99999px;
+      position:absolute;
+      right: 7px;
+      top: 21px;
+      transform:rotate(45deg);
+    }
+
     /* franchise_store 끝 */
 
     /* paiks_coffee_sns 시작 */
@@ -247,7 +308,24 @@
           </h3>
         </div>
       </article>
-      <article class="franchise_store"></article>
+      <article class="franchise_store">
+        <div class="content clearfix">
+          <div class="franchise">
+            <h3 class="eng">franchise</h3>
+            <p>빽다방 창업안내를 도와드리겠습니다.</p>
+            <img src="./images/frainchise.png" alt="백종원">
+          </div>
+          <div class="store">
+            <h3 class="eng">store</h3>
+            <p>원하시는 지역의 매장을 검색해 보세요!</p>
+            <form>
+              <input type="text" placeholder="Find a store in Your area!">
+              <div class="circle">원</div>
+              <div class="line">라인</div>
+            </form>
+          </div>
+        </div>
+      </article>
       <article class="paiks_coffee_sns"></article>
     </section>
     <footer class="footer"></footer>
