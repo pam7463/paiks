@@ -23,7 +23,7 @@
     body{
       font-family:"Noto Sans KR";
     }
-    body,div,span,ul,li,section,header,footer,article,a{
+    body,div,span,h1,h2,h3,h4,h5,h6,p,ul,li,section,header,footer,article,a{
       font-size:14px;
       font-weight:400;
       line-height:1em;
@@ -42,14 +42,40 @@
     /* 헤더 스타일 시작 */
     .header{
       width:640px;
-      height:70px;
-      background-color:red;
+      background-color:#ffffff;
     }
     .header .content{
       display:flex;
       flex-flow:row nowrap;
       justify-content: space-between;
       align-items:center;
+      height:70px;
+    }
+    .main_logo>img{
+      width:32px;
+      height:32px;
+    }
+    .main_logo>h1{
+      display:inline-block;
+      margin-top:8px;
+      margin-left:6px;
+      font-weight:bold;
+      font-size:24px;
+      color:#0e347e;
+    }
+    .header .btn_ham{
+      
+      height:24px;
+    }
+    .header .btn_ham li{
+      text-indent:-99999px;
+      width:32px;
+      height:4px;
+      border-radius:2px;
+      background-color:#000000;
+    }
+    .header .btn_ham li:nth-child(2){
+      margin:6px 0;
     }
     /* 헤더 스타일 끝 */
 
@@ -65,17 +91,71 @@
     /* coffee_story 시작 */
     .coffee_story{
       height:285px;
-      background-color:blue;
+      overflow:hidden;
+      position:relative;
+    }
+    .coffee_story>img{
+      height:100%;
+      transform:translateX(-920px);
+    }
+    .coffee_story>.coffee_story_txt{
+      position:absolute;
+      top:25px;
+    }
+    .coffee_story>.coffee_story_txt>p:nth-of-type(1){
+      font-weight:bold;
+      font-size:18px;
+      color:#564e00;
+    }
+    .coffee_story>.coffee_story_txt>h2{
+      margin:8px 0;
+      font-weight:900;
+      font-size:56px;
+      color:#0e347e;
+    }
+    .coffee_story>.coffee_story_txt>p:nth-of-type(2){
+      font-weight:500;
+      font-size:14px;
+      color:#202020;
     }
     /* coffee_story끝 */
     
     /* item 시작 */
     .item{
       height:342px;
-      background-color:yellow;
       margin-bottom:10px;
-      border:1px solid black;
+      overflow:hidden;
+      position:relative;
     }
+    .item>img{
+      height:100%;
+      transform:translateX(-9px);
+    }
+    .item>.item_txt{
+      position:absolute;
+      top:25px;
+    }
+    .item>.item_txt>h3{
+      font-family:'Roboto';
+      font-weight:bolder;
+      font-size:24px;
+      line-height:24px;
+      padding-bottom:3px;
+    }
+    .item.fresh_coffee>.item_txt>h3{
+      color:#6b4d30;
+      border-bottom: 2px solid #6b4d30;
+    }
+    .item.various_beverage>.item_txt>h3{
+      color:#93a03d;
+      border-bottom: 2px solid #93a03d;
+    }
+    .item.sweet_paiks_ccino>.item_txt>h3,
+    .item.tasty_ice_cream>.item_txt>h3{
+      color:#f1ae1d;
+      border-bottom: 2px solid #f1ae1d;
+    }
+    
     .item.tasty_ice_cream{
       margin-bottom:20px;
     }
@@ -114,19 +194,59 @@
           <h1>빽다방</h1>
         </div>
         <ul class="btn_ham">
-          <li>라인1</li>
-          <li>라인2</li>
-          <li>라인3</li>
+          <li>햄버거라인1</li>
+          <li>햄버거라인2</li>
+          <li>햄버거라인3</li>
         </ul>
       </div>
     </header>
     <section class="section">
       <article class="main_banner"></article>
-      <article class="coffee_story"></article>
-      <article class="item fresh_coffee"></article>
-      <article class="item various_beverage"></article>
-      <article class="item sweet_paiks_ccino"></article>
-      <article class="item tasty_ice_cream"></article>
+      <article class="coffee_story">
+        <img src="./images/coffee_story.jpg" alt="커피스토리">
+        <div class="coffee_story_txt content">
+          <p class="eng">The Finest Quality Coffee Plants</p>
+          <h2  class="eng">PAIK’S COFFEE STORY</h2>
+          <p>균형잡힌 바디감으로 긴여운을 남기는 빽다방 커피를 만나보세요.</p>
+        </div>
+      </article>
+      <article class="item fresh_coffee">
+        <img src="./images/free_coffee.jpg" alt="free coffee">
+        <div class="item_txt content">
+          <h3>
+            FRESH<br>
+            COFFEE
+          </h3>
+        </div>
+      </article>
+      <article class="item various_beverage">
+        <img src="./images/various_beverage.jpg" alt="various beverage">
+        <div class="item_txt content">
+          <h3>
+            VARIOUS<br>
+            BEVERAGE
+          </h3>
+        </div>
+      </article>
+      <article class="item sweet_paiks_ccino">
+        <img src="./images/sweet_paik.jpg" alt="sweet paik">
+        <div class="item_txt content">
+          <h3>
+            SWEET<br>
+            PAIK'S CCINO
+          </h3>
+        </div>
+      </article>
+      <article class="item tasty_ice_cream">
+        <img src="./images/tasty_ice_cream.jpg" alt="tasty ice cream">
+        <div class="item_txt content">
+          <h3>
+            TASTY<br>
+            ICE CREAM /<br>
+            DESSERT
+          </h3>
+        </div>
+      </article>
       <article class="franchise_store"></article>
       <article class="paiks_coffee_sns"></article>
     </section>
